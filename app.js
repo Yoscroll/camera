@@ -55,3 +55,14 @@ function takePhoto() {
     })
     .catch(err => alert('Error: ' + err));
 }
+
+const canvas = document.createElement('canvas');
+const video = document.querySelector('#videoTest');
+const img = document.querySelector('#imageTag');
+function takePhoto() {
+  canvas.width = video.videoWidth;
+  canvas.height = video.videoHeight;
+  canvas.getContext('2d').drawImage(video, 0, 0);
+  // Other browsers will fall back to image/png
+  img.src = canvas.toDataURL('image/webp');
+};
