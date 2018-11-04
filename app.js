@@ -1,5 +1,3 @@
-
-
 function getUserMedia(options, successCallback, failureCallback) {
   var api = navigator.getUserMedia || navigator.webkitGetUserMedia ||
     navigator.mozGetUserMedia || navigator.msGetUserMedia;
@@ -35,7 +33,7 @@ function getStream() {
   });
 }
 
-function takePhoto() {
+/*function takePhoto() {
   if (!('ImageCapture' in window)) {
     alert('ImageCapture is not available');
     return;
@@ -55,7 +53,7 @@ function takePhoto() {
     })
     .catch(err => alert('Error: ' + err));
 }
-
+*/
 const canvas = document.createElement('canvas');
 const video = document.querySelector('#videoTest');
 const img = document.querySelector('#imageTag');
